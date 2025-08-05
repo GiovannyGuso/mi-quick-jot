@@ -1,0 +1,28 @@
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Node (si llegas a usar dependencias locales)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de build / caché
+dist/
+build/
+.cache/
+
+# Archivos temporales
+*.log
+*~
+*.swp
+
+# HTTP-Server cache (si usas http-server con -c-1)
+.cache-http-server/
