@@ -1,40 +1,61 @@
-/* Paleta rápida: blanco sobre fondo claro */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
-}
+body { margin: 0; font-family: 'Roboto', sans-serif; background: #f5f5f7; color: #263238; }
 
-/* Contenedor principal */
-.jot-container {
-  max-width: 600px;
-  margin: 80px auto;
-  padding: 0 16px;
+.hero {
+  text-align: center;
+  padding: 48px 16px 24px;
+  background: linear-gradient(135deg, #3F51B5 0%, #5C6BC0 70%);
+  color: #fff;
 }
+.hero__title { margin: 0 0 8px; font-weight: 500; }
+.hero__subtitle { margin: 0 0 24px; opacity: .9; }
 
-/* Input y botón alineados */
 .jot-input {
-  display: flex;
+  display: inline-flex;
+  gap: 10px;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
 }
+.jot-input__text { min-width: 260px; }
 
-/* Lista de notas */
-.notes-list .mdl-cell {
-  width: 100%;
-  margin-bottom: 16px;
+.search-row {
+  margin: 12px auto 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  max-width: 720px;
 }
+.note-count { display: inline-flex; gap: 6px; align-items: center; opacity: .9; }
 
-/* Cada tarjeta de nota */
-.notes-list .mdl-card {
-  width: 100%;
-  background: #ffffff;
-}
+.notes-wrap { max-width: 960px; margin: 24px auto; padding: 0 16px 64px; }
+.notes-list .mdl-cell { width: 100%; }
+@media (min-width: 700px) { .notes-list .mdl-cell { width: 50%; } }
+@media (min-width: 1000px){ .notes-list .mdl-cell { width: 33.3333%; } }
 
-/* Espaciado interno de la tarjeta */
-.notes-list .mdl-card__supporting-text {
-  padding: 16px;
-  font-size: 1rem;
-  color: #333333;
+.note-card.mdl-card { width: 100%; border-radius: 16px; overflow: hidden; background: #fff; }
+.note-card .mdl-card__title { padding: 16px; font-weight: 500; border-bottom: 1px solid #eee; }
+.note-card .mdl-card__supporting-text { padding: 16px; white-space: pre-wrap; }
+.note-card .mdl-card__actions { display:flex; align-items:center; justify-content:space-between; padding: 8px 8px 12px; }
+.note-date { font-size: 12px; opacity: .7; }
+
+.empty-state {
+  display: none;
+  text-align: center;
+  background:#fff; border-radius: 16px; padding: 24px;
 }
+.empty-state i { font-size: 42px; color:#FFC107; display:block; margin-bottom: 8px; }
+
+.fab { position: fixed; right: 24px; bottom: 24px; }
+
+.footer { text-align:center; padding: 24px 16px; color:#607D8B; }
+/* Estilo del botón "Instalar App" en el header */
+#installBtn {
+  display: none;           
+  color: #fff;              
+  align-items: center;     
+  gap: 6px;                
+}
+#installBtn .material-icons { vertical-align: middle; }
+
